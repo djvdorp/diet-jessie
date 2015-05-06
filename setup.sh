@@ -54,3 +54,10 @@ apt-get dist-upgrade
 
 aptitude -y install $ESSENTIALS
 aptitude -y install $DESKTOP_ENV
+aptitude -y install $NETWORKING
+aptitude -y install $AUDIO
+aptitude -y install $BROWSERS
+aptitude -y install $MULTIMEDIA
+aptitude -y install $FILE_MGMT
+aptitude -y install $EDITORS
+aptitude -y install $COMPRESSION
