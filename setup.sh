@@ -2,7 +2,7 @@
 
 # Package declarations:
 ## 0. Bare essentials
-ESSENTIALS="bash curl wget axel screen htop nmon"
+ESSENTIALS="bash curl wget axel screen htop nmon fail2ban nano vim ack-grep rxvt-unicode"
 
 ## 1. Desktop Environment and Window Manager
 DESKTOP_ENV="xorg i3 lightdm"
