@@ -5,7 +5,28 @@
 ESSENTIALS="bash curl wget axel screen htop nmon fail2ban nano vim ack-grep rxvt-unicode"
 
 ## 1. Desktop Environment and Window Manager
-DESKTOP_ENV="xorg i3 lightdm"
+DESKTOP_ENV="xorg i3 i3status suckless-tools lightdm xautolock"
+
+## 2. Networking
+NETWORKING="wicd-curses"
+
+## 3. Audio
+AUDIO="alsa-base alsa-utils pulseaudio"
+
+## 4. Browsers
+BROWSERS="iceweasel chromium"
+
+## 5. Multimedia
+MULTIMEDIA="vlc feh gpicview evince scrot imagemagick"
+
+## 6. File Management
+FILE_MGMT="pcmanfm mc ranger xarchiver"
+
+## 7. Editors
+EDITORS="geany"
+
+## 8. Compression
+COMPRESSION="zip rar unzip unrar gzip tar p7zip-full"
 
 
 
