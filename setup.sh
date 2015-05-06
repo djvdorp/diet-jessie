@@ -28,6 +28,15 @@ EDITORS="geany"
 ## 8. Compression
 COMPRESSION="zip rar unzip unrar gzip tar p7zip-full"
 
+## 9. Email
+EMAIL="mail-notification icedove"
+
+## 10. Version Control
+VC="git subversion tig"
+
+## 11. Miscellaneous
+MISC="dunst unclutter parcellite"
+
 
 
 # Start the actual setup:
@@ -61,3 +70,6 @@ aptitude -y install $MULTIMEDIA
 aptitude -y install $FILE_MGMT
 aptitude -y install $EDITORS
 aptitude -y install $COMPRESSION
+aptitude -y install $EMAIL
+aptitude -y install $VC
+aptitude -y install $MISC
