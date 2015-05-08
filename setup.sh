@@ -42,8 +42,7 @@ MISC="dunst unclutter parcellite"
 # Start the actual setup:
 
 apt-get update
-apt-get -y install etckeeper
-apt-get -y install aptitude
+apt-get -y install etckeeper aptitude
 
 cat > /etc/apt/sources.list <<EOF
 deb http://httpredir.debian.org/debian/ jessie main contrib non-free
@@ -57,9 +56,7 @@ deb http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
 deb-src http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
 EOF
 
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
+apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 
 aptitude -y install $ESSENTIALS $DESKTOP_ENV $NETWORKING $AUDIO $BROWSERS $MULTIMEDIA $FILE_MGMT $EDITORS $COMPRESSION $EMAIL $VC $MISC
 
