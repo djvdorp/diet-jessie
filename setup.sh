@@ -61,15 +61,4 @@ apt-get update
 apt-get upgrade
 apt-get dist-upgrade
 
-aptitude -y install $ESSENTIALS
-aptitude -y install $DESKTOP_ENV
-aptitude -y install $NETWORKING
-aptitude -y install $AUDIO
-aptitude -y install $BROWSERS
-aptitude -y install $MULTIMEDIA
-aptitude -y install $FILE_MGMT
-aptitude -y install $EDITORS
-aptitude -y install $COMPRESSION
-aptitude -y install $EMAIL
-aptitude -y install $VC
-aptitude -y install $MISC
+aptitude -y install $ESSENTIALS $DESKTOP_ENV $NETWORKING $AUDIO $BROWSERS $MULTIMEDIA $FILE_MGMT $EDITORS $COMPRESSION $EMAIL $VC $MISC
