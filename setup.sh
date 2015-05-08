@@ -62,3 +62,61 @@ apt-get upgrade
 apt-get dist-upgrade
 
 aptitude -y install $ESSENTIALS $DESKTOP_ENV $NETWORKING $AUDIO $BROWSERS $MULTIMEDIA $FILE_MGMT $EDITORS $COMPRESSION $EMAIL $VC $MISC
+
+
+
+cat > /usr/local/bin/shot-lock <<EOF
+#!/bin/sh
+#
+# Lock the screen while showing an unreadable version of your current screen
+# Author: rcefala
+# Required packages: scrot, imagemagick (convert)
+
+SCREEN1=`tempfile --prefix shot- --suffix .png`
+SCREEN2=`tempfile --prefix shot- --suffix .png`
+
+scrot $SCREEN1
+convert $SCREEN1 -scale 20% -scale 500% $SCREEN2
+rm -f $SCREEN1
+i3lock -i $SCREEN2
+rm -f $SCREEN2
+EOF
+
+chmod +x /usr/local/bin/shot-lock
+
+
+
+cat > /usr/local/bin/i3exit <<EOF
+#!/bin/sh
+lock() {
+    /usr/local/bin/shot-lock
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
+EOF
+
+chmod +x /usr/local/bin/i3exit
