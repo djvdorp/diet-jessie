@@ -1,40 +1,40 @@
 #!/bin/sh
 
 # Package declarations:
-## 0. Bare essentials
-ESSENTIALS="bash curl wget axel screen htop nmon fail2ban nano vim ack-grep rxvt-unicode sudo"
+### 0. Bare essentials
+ESSENTIALS="bash curl wget axel screen htop nmon fail2ban ack-grep rxvt-unicode sudo"
 
-## 1. Desktop Environment and Window Manager
+### 1. Desktop Environment and Window Manager
 DESKTOP_ENV="xorg i3 i3status suckless-tools lightdm xautolock"
 
-## 2. Networking
+### 2. Networking
 NETWORKING="wicd-curses"
 
-## 3. Audio
+### 3. Audio
 AUDIO="alsa-base alsa-utils pulseaudio"
 
-## 4. Browsers
+### 4. Browsers
 BROWSERS="iceweasel chromium"
 
-## 5. Multimedia
+### 5. Multimedia
 MULTIMEDIA="vlc feh gpicview evince scrot imagemagick"
 
-## 6. File Management
+### 6. File Management
 FILE_MGMT="pcmanfm mc ranger xarchiver"
 
-## 7. Editors
-EDITORS="geany"
+### 7. Editors
+EDITORS="nano vim geany"
 
-## 8. Compression
+### 8. Compression
 COMPRESSION="zip rar unzip unrar gzip tar p7zip-full"
 
-## 9. Email
+### 9. Email
 EMAIL="mail-notification icedove"
 
-## 10. Version Control
+### 10. Version Control
 VC="git subversion tig"
 
-## 11. Miscellaneous
+### 11. Miscellaneous
 MISC="dunst unclutter parcellite"
 
 
