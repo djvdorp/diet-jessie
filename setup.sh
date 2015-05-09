@@ -46,17 +46,14 @@ apt-get -y install etckeeper aptitude
 
 
 
-cat > /etc/apt/sources.list <<EOF
-deb http://httpredir.debian.org/debian/ jessie main contrib non-free
-deb-src http://httpredir.debian.org/debian/ jessie main contrib non-free
-
-deb http://security.debian.org/ jessie/updates main contrib non-free
-deb-src http://security.debian.org/ jessie/updates main contrib non-free
-
-# jessie-updates, previously known as 'volatile'
-deb http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
-deb-src http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
-EOF
+# In all lines starting with "deb ", "deb [tab]", or "deb-",
+# delete all instances of "contrib" and "non-free",
+# replace all instances of "main" with "main contrib nonfree"
+sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g"\
+-e "/^[ \t]*deb[ \t-]/ s/[ \t]non-free//g"\
+-e "/^[ \t]*deb[ \t-]/ s/[ \t]main/ main contrib non-free /g"\
+"/etc/apt/sources.list" > "/etc/apt/sources.list.new"
+mv /etc/apt/sources.list.new /etc/apt/sources.list
 
 
 
