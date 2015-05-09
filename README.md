@@ -9,6 +9,16 @@ The starting point for this installation is a clean Debian 8 (Jessie) netinstall
 
 This does, however, not mean that it is only compatible with Debian 8 (Jessie). As long as the package names in the list below are installable via apt-get/aptitude on your distribution, it might probably work just as well on other Debian versions and/or Debian-derivatives like Ubuntu, Linux Mint etc.
 
+## How do I use this?
+After reading the starting point for this installation, it is pretty easy to setup your system using Diet Jessie. Assuming that your freshly-installed device has an active internet connection, you can just do these three steps (as root):
+
+
+```
+# wget https://raw.githubusercontent.com/djvdorp/diet-jessie/master/setup.sh
+# chmod +x setup.sh
+# ./setup.sh
+```
+
 ## What does this install?
 Diet Jessie tries to supply you with a very tiny and productive setup, without all the bloatware featured with a full desktop setup.
 
