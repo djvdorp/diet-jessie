@@ -7,6 +7,8 @@ The starting point for this installation is a clean Debian 8 (Jessie) netinstall
 * OpenSSH server
 * Standard system utilities
 
+This does, however, not mean that it is only compatible with Debian 8 (Jessie). As long as the package names in the list below are installable via apt-get/aptitude on your distribution, it might probably work just as well on other Debian versions and/or Debian-derivatives like Ubuntu, Linux Mint etc.
+
 ## What does this install?
 Diet Jessie tries to supply you with a very tiny and productive setup, without all the bloatware featured with a full desktop setup.
 
