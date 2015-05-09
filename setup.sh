@@ -2,7 +2,7 @@
 
 # Package declarations:
 ### 0. Bare essentials
-ESSENTIALS="bash curl wget axel screen htop nmon fail2ban ack-grep rxvt-unicode sudo"
+ESSENTIALS="bash curl wget axel screen htop nmon fail2ban ack-grep stterm sudo"
 
 ### 1. Desktop Environment and Window Manager
 DESKTOP_ENV="xorg i3 i3status suckless-tools lightdm xautolock"
@@ -44,6 +44,8 @@ MISC="dunst unclutter parcellite"
 apt-get update
 apt-get -y install etckeeper aptitude
 
+
+
 cat > /etc/apt/sources.list <<EOF
 deb http://httpredir.debian.org/debian/ jessie main contrib non-free
 deb-src http://httpredir.debian.org/debian/ jessie main contrib non-free
@@ -56,9 +58,11 @@ deb http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
 deb-src http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
 EOF
 
-apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 
+
+apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 aptitude -y install $ESSENTIALS $DESKTOP_ENV $NETWORKING $AUDIO $BROWSERS $MULTIMEDIA $FILE_MGMT $EDITORS $COMPRESSION $EMAIL $VC $MISC
+update-alternatives --set x-terminal-emulator $(which stterm)
 
 
 

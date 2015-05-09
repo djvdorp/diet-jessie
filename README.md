@@ -24,7 +24,7 @@ The packages installed are divided into the following groups:
 - nmon 
 - fail2ban 
 - ack-grep 
-- rxvt-unicode 
+- stterm 
 - sudo
 
 ### 1. Desktop Environment and Window Manager
